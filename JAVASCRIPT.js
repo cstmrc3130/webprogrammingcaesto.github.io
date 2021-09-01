@@ -53,14 +53,6 @@ function topFunction() {
   document.documentElement.scrollTop = 0;
 }
 
-// FUNCTION TO CLOSE CURRENT WINDOW 
-function close_onclick(){
-  if (confirm("Close Current Tab?")){
-    window.open('','_parent',''); 
-    window.close();
-  }
-}
-
 // FUNCTION TO ENABLE WINDOW CLOSE
 function taylor_samepage(){
   window.location.replace('#TAYLOR');
