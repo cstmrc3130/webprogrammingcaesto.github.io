@@ -56,6 +56,7 @@ function topFunction() {
 // FUNCTION TO CLOSE CURRENT WINDOW 
 function close_onclick(){
   if (confirm("Close Current Tab?")){
+    window.open('','_parent',''); 
     window.close();
   }
 }
