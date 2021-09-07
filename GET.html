@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/01. USU ICON.ico">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="STYLE.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>211402084 • CAESTO MARCO</title>
+    <style>
+        td
+        {   display: table-cell;
+            padding-inline-start: 1em;
+            height: fit-content;
+            width: 30%;
+            white-space: nowrap;
+            text-align: left;
+            text-decoration: underline;
+        }
+        tr
+        {
+            height: 65px;
+        }
+    </style>
+</head>
+<body style="font-family:monospace; font-size: 1.5rem; font-weight: unset; background-image: url(/04.\ BACKGROUND.jpg); background-size: 900rem; zoom: 1;background-position: center; margin: 0;">
+    <table border="0px" align="center" cellspacing="0" cellpadding="0">
+        <tr>
+            <td>
+                YOUR USERNAME 
+            </td>
+            <td>
+                <span id="USERNAME"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                YOUR PASSWORD
+            </td>
+            <td>
+                <span id="PASSWORD"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                YOUR COMMENTS 
+            </td>
+            <td>
+                <span id="COMMENTS"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                YOUR GENDER
+            </td>
+            <td>
+                <span id="GENDER"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                YOUR HOBBIES  
+            </td>
+            <td>
+                <span id="CHECKER"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                YOUR PROFESSION  
+            </td>
+            <td>
+                <span id="PROFESSION"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                YOUR INSTAGRAM  
+            </td>
+            <td>
+                <span id="INSTAGRAM"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                YOUR FACEBOOK 
+            </td>
+            <td>
+                <span id="FACEBOOK"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                YOUR WHATSAPP  
+            </td>
+            <td>
+                <span id="WHATSAPP"></span>
+            </td>
+        </tr>
+    </table>    
+
+    <script>
+        document.getElementById("USERNAME").innerHTML=localStorage.getItem("VALUE_USERNAME")
+        document.getElementById("PASSWORD").innerHTML=localStorage.getItem("VALUE_PASSWORD")
+        document.getElementById("COMMENTS").innerHTML=localStorage.getItem("VALUE_COMMENTS")
+        document.getElementById("GENDER").innerHTML=localStorage.getItem("VALUE_GENDER")
+        document.getElementById("CHECKER").innerHTML=localStorage.getItem("VALUE_HOBBIES")
+        document.getElementById("PROFESSION").innerHTML=localStorage.getItem("VALUE_PROFESSION")
+        document.getElementById("INSTAGRAM").innerHTML=localStorage.getItem("VALUE_INSTAGRAM")
+        document.getElementById("FACEBOOK").innerHTML=localStorage.getItem("VALUE_FACEBOOK")
+        document.getElementById("WHATSAPP").innerHTML=localStorage.getItem("VALUE_WHATSAPP")
+    </script>
+    <br>
+    <a href="TUGAS 2.html" style="font-size: 2rem; font-weight: bolder; text-decoration: none; display: block; text-align: left;">🢠 BACK TO FORM</a>
+</body>
+</html>
