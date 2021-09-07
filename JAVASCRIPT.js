@@ -137,7 +137,7 @@ function SUBMITALLFORMS()
   var USERNAME = document.getElementById("USERNAME").value;
   var PASSWORD = document.getElementById("PASSWORD").value;
   var COMMENTS = document.getElementById("COMMENTS").value;
-  var GENDER = document.getElementById("GENDER").value;
+  var GENDER = document.querySelector('input[name="GENDER"]:checked').value;
   var HOBBIES = document.getElementById("CHECKER").value;
   var PROFESSION = document.getElementById("PROFESSION").value;
   var INSTAGRAM = document.getElementById("INSTAGRAM").value;
