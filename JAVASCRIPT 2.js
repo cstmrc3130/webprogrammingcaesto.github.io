@@ -50,7 +50,7 @@ BACK_2.onclick = function()
 // TO DISABLE AND ENABLE BUTTON IN FORM 1
 document.getElementById("FORM_1").addEventListener("keyup", () => 
 {
-  if (document.getElementById("USERNAME").value.length >= 5 && document.getElementById("PASSWORD").value.length >= 5)
+  if (document.getElementById("USERNAME").value.length >= 1 && document.getElementById("PASSWORD").value.length >= 5)
   {
     document.getElementById("NEXT_1").style.display = "block"
     document.getElementById("NEXT_CHECK").style.display = "none"
