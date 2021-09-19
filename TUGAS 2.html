@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/01. USU ICON.ico">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="STYLE 2.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>211402084 • CAESTO MARCO</title>
+  </head>
+  <body class="BODY_2">
+    <table border="5px" width= "100%" cellspacing="0" cellpadding="0" id="TOP" align="center" style="border-color: transparent">
+      <tr>
+        <td colspan="2">
+            <marquee behavior="slide" direction="up" scrollamount="2" style="text-align: center; font-family: monospace; font-size: 70px; font-weight: 600; color:#FFD000; display: block;">
+              TUGAS 2
+            </marquee> 
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" style="padding: 10px; background-color: transparent">
+          <font style="font-family: monospace; font-size: 30px; text-align: left; padding-left: 0.7rem; ">               
+          <a href="index.html" style="font-weight: bold; text-decoration: none; color: gold;">HOME</a>
+          <a style="font-weight: bold; color: whitesmoke; ">|</a>
+          <a href="TUGAS 2.html" target="_self" style="font-weight: bold; text-decoration: none; color: gold;">TUGAS 2</a>
+          <a style="font-weight: bold; color: whitesmoke;">|</a>
+          <a href="TUGAS 3.html" target="_self" style="font-weight: bold; text-decoration: none; color: gold;">TUGAS 3</a>
+          </font>
+        </td>
+      </tr>
+    </table> 
+    <div class="CONTAINER">
+      <form id="FORM_1" action="GET.html" method="GET">
+        <h2 class="FORM_H2">CREATE ACCOUNT</h2>
+        <i class="fa fa-user fa-lg fa-fw" style="position: absolute; padding-inline-start: 0px; padding-block-start: 15px;"></i>
+        <input class="FORM_1" type="text" placeholder="USERNAME" name="USERNAME" id="USERNAME" autocomplete="off" minlength="5" oninvalid="this.setCustomValidity('THIS FIELD CANNOT BE EMPTY')" oninput="this.setCustomValidity('')" required>
+        <i class="fa fa-key fa-lg fa-fw" style="position: absolute; padding-inline-start: 0px; padding-block-start: 15px;"></i>
+        <input class="FORM_1" type="password" placeholder="PASSWORD" name="PASSWORD" id="PASSWORD" autocomplete="off" minlength="5" oninvalid="this.setCustomValidity('THIS FIELD CANNOT BE EMPTY')" oninput="this.setCustomValidity('')" required="">
+        <i class="fa fa-comment fa-lg fa-fw" style="position: absolute; padding-inline-start: 0px; padding-block-start: 15px;"></i>
+        <textarea name="COMMENTS" id="COMMENTS" cols="22" rows="1" placeholder="COMMENTS"></textarea>
+        <div class="BUTTON_NAV_1">
+          <button type="submit" id="NEXT_CHECK" class="FORM_1_BUTTON_DISABLED">NEXT</button>
+        </div>
+        <div class="BUTTON_NAV_1">
+          <button type="button" id="NEXT_1" class="FORM_1_BUTTON">NEXT</button>
+        </div>
+      </form>
+      <form id="FORM_2" method="GET" action="GET.html">
+        <h2 class="FORM_H2">PERSONAL INFO</h2>
+        <table  align="center" style="width: 280px;">
+          <tr>
+            <td style=" padding-inline-start: 4px; width: 50%;">
+              <label for="GENDER"></label>GENDER
+            </td>
+            <td>
+              <ul>
+                <li>
+                  <input type="radio" name="GENDER" value="MALE" id="MALE">                  
+                  <label for="MALE">MALE</label>
+                </li>
+                <li>
+                  <input type="radio" name="GENDER" value="FEMALE" id="FEMALE">
+                  <label for="FEMALE">FEMALE</label>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding-inline-start: 4px; width: 50%;">
+              <label for="HOBBIES"></label>HOBBIES
+            </td>
+            <td>
+              <ul>
+                <li>
+                  <input type="checkbox" name="SPORT" id="SPORT" value="SPORT" onchange="GETCHECKBOXVALUES()">
+                  <input type="hidden" name="HIDDEN" id="CHECKER" value="" onchange="GETCHECKBOXVALUES()">
+                  <label for="SPORT">SPORT</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="TRAVEL" id="TRAVEL" value="TRAVELLING" onchange="GETCHECKBOXVALUES()">
+                  <label for="TRAVEL">TRAVEL</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="BUSINESS" id="BUSINESS" value="BUSINESS" onchange="GETCHECKBOXVALUES()">
+                  <label for="BUSINESS">BUSINESS</label>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td style=" width: 50%;">
+              <label for="PROFESSION"></label>PROFESSION
+            </td>
+            <td style=" padding-inline-start: 4px;">
+              <ul>
+                <li>
+                  <select onfocus='this.size=2;' onblur='this.size=1;' onchange='this.size=1;' name="PROFESSION" id="PROFESSION">
+                    <option value="STUDENTS" name="STUDENTS">STUDENTS</option>
+                    <option value="TEACHER" name>TEACHER</option>
+                    <option value="DESIGNER">DESIGNER</option>
+                    <option value="PROGRAMMER">PROGRAMMER</option>
+                    <option value="SCIENTIST">SCIENTIST</option>
+                  </select>
+                </li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+        <div class="BUTTON_NAV_2">
+          <button type="button" id="BACK_1" class="FORM_2_BUTTON">BACK</button>
+          <button type="button" id="NEXT_2" class="FORM_2_BUTTON">NEXT</button>
+        </div>
+      </form>
+      <form id="FORM_3" action="GET.html" method="GET" >
+        <h2 class="FORM_H2">SOCIAL MEDIA</h2>
+        <i class="fa fa-instagram fa-lg fa-fw" style="position: absolute; padding-inline-start: 0px; padding-block-start: 15px;"></i>
+        <input class="FORM_3" type="text" placeholder="INSTAGRAM" name="INSTAGRAM" id="INSTAGRAM" oninvalid="this.setCustomValidity('THIS FIELD CANNOT BE EMPTY')" oninput="this.setCustomValidity('')" required>
+        <i class="fa fa-facebook fa-lg fa-fw" style="position: absolute; padding-inline-start: 0px; padding-block-start: 15px;"></i>
+        <input class="FORM_3" type="text" placeholder="FACEBOOK" name="FACEBOOK" id="FACEBOOK" oninvalid="this.setCustomValidity('THIS FIELD CANNOT BE EMPTY')" oninput="this.setCustomValidity('')" required>
+        <i class="fa fa-whatsapp fa-lg fa-fw" style="position: absolute; padding-inline-start: 0px; padding-block-start: 15px;"></i>
+        <input class="FORM_3" type="number" placeholder="WHATSAPP NUMBER" name="WHATSAPP" id="WHATSAPP" oninvalid="this.setCustomValidity('THIS FIELD CANNOT BE EMPTY')" oninput="this.setCustomValidity('')" required>
+        <div class="BUTTON_NAV_3">
+          <button type="button" id="BACK_2" class="FORM_3_BUTTON">BACK</button>
+          <button type="submit" id="SUBMIT" class="FORM_3_BUTTON" onclick="SUBMITALLFORMS()">SUBMIT</button>
+        </div>
+      </form>
+      <div class="PROCESS_ROW">
+        <div id="PROCESS_ARROW"></div>
+        <div class="PROCESS_COL">
+          <small>STEP 1</small>
+        </div>
+        <div class="PROCESS_COL">
+          <small>STEP 2</small>
+        </div>
+        <div class="PROCESS_COL">
+          <small>STEP 3</small>
+        </div>
+      </div>
+    </div>
+  </body>
+  <footer> © 2021 CAESTO MARCO TAMPUBOLON </footer>
+  <script type="text/javascript" src="JAVASCRIPT 2.js"></script>
+  <script type="text/javascript" src="SNOWSTORM.js"></script>
+  <style type="text/css">
+    * {cursor: url(https://ani.cursors-4u.net/cursors/cur-13/cur1158.ani), 
+      url(https://ani.cursors-4u.net/cursors/cur-13/cur1158.png),
+      auto !important;}</style><a href="https://www.cursors-4u.com/cursor/2018/06/08/hell-yeah-pointer-1.html" 
+      target="_blank" title="Hell Yeah Pointer 1">
+      <img src="https://cur.cursors-4u.net/cursor.png" border="0" alt="Hell Yeah Pointer 1" style="position:absolute; top: 0px; right: 0px;" />
+      </a>
+   </style>
+</html>
