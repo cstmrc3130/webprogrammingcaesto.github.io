@@ -17,7 +17,6 @@ function ClickEventCort()
 {
   if (SHOW_IMAGE_CORT.style.display == "none" )
   {
-    sada
     document.getElementById("SHOW_IMAGE_CORT").style.display = "block";
     document.getElementById("SHOW_TEXT_CORT").innerText = "HIDE IMAGE";
 
