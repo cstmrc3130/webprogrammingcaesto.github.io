@@ -1,0 +1,26 @@
+MariaDB [(none)]> USE uassbd
+Database changed
+MariaDB [uassbd]> SELECT a.id, a.task_name, b.task_status, b.task_comments, d.category_name as 'Category',DATEDIFF(a.task_duration_end, a.ask_duration_start) as 'Lama Pengerjaan', c.name as 'Create By', (SELECT name from users INNER JOIN task_dailies WHERE users.id = task_dailies.user_verify_id) as 'Verified By' FROM task_plans a
+    -> LEFT JOIN task_dailies b ON a.id = b.plan_id
+    -> LEFT JOIN users c ON c.id = a.id
+    -> LEFT JOIN task_categories d ON a.category_id = d.id;
++--------------------------------------+-----------------------------------------+-------------+---------------+--------------+-----------------+-----------+-------------+
+| id                                   | task_name                               | task_status | task_comments | Category     | Lama Pengerjaan | Create By | Verified By |
++--------------------------------------+-----------------------------------------+-------------+---------------+--------------+-----------------+-----------+-------------+
+| 924eaa0e-c8f1-4132-a032-1d98c176a8c3 | Membuat Modul add_to_cart pada Aplikasi | NULL        | NULL          | Administrasi |              20 | NULL      | NULL        |
+| c96fdbd6-a3a4-42e3-b437-444ffd734a36 | Menganalisa Data Kemahasiswaan          | NULL        | NULL          | Teknikal     |               7 | NULL      | NULL        |
+| f1ee037b-9135-41d2-9757-091391df4fb8 | Mendokumentasikan Code                  | NULL        | NULL          | Analisis     |               0 | NULL      | NULL        |
++--------------------------------------+-----------------------------------------+-------------+---------------+--------------+-----------------+-----------+-------------+
+3 rows in set (0.001 sec)
+
+MariaDB [uassbd]> SELECT * FROM users LEFT JOIN task_plans ON task_plans.id = users.id INNER JOIN task_name ON task_name.id = users.id;
+ERROR 1146 (42S02): Table 'uassbd.task_name' doesn't exist
+SELECT * FROM users LEFT JOIN task_plans ON task_plans.id = users.id INNER JOIN task_categories ON task_categories.id = users.idMariaDB [uassbd]> SELECT * FROM users LEFT JOIN task_plans ON task_plans.id = users.id INNER JOIN task_categories ON task_categories.id = users.id;
++--------------------------------------+--------+--------------+-------------------+--------------+----------------+------------+------------+------+-----------+--------------------+-------------------+-------------+-------------+---------------+---------------+-------------+------------+------------+--------------------------------------+---------------+--------------------------------------------+------------+------------+
+| id                                   | name   | email        | email_verified_at | password     | remember_token | created_at | updated_at | id   | task_name | ask_duration_start | task_duration_end | user_create | category_id | indicators_id | task_priority | task_status | created_at | updated_at | id                                   | category_name | description                                | created_at | updated_at |
++--------------------------------------+--------+--------------+-------------------+--------------+----------------+------------+------------+------+-----------+--------------------+-------------------+-------------+-------------+---------------+---------------+-------------+------------+------------+--------------------------------------+---------------+--------------------------------------------+------------+------------+
+| 72233152-7af0-4e89-94fc-d8d02e73aba8 | User A | user@mail.co | NULL              | MD5('12345') | NULL           | NULL       | NULL       | NULL | NULL      | NULL               | NULL              | NULL        | NULL        | NULL          |          NULL | NULL        | NULL       | NULL       | 72233152-7af0-4e89-94fc-d8d02e73aba8 | Administrasi  | Tugas yang berhubungan dengan administrasi | NULL       | NULL       |
++--------------------------------------+--------+--------------+-------------------+--------------+----------------+------------+------------+------+-----------+--------------------+-------------------+-------------+-------------+---------------+---------------+-------------+------------+------------+--------------------------------------+---------------+--------------------------------------------+------------+------------+
+1 row in set (0.001 sec)
+
+MariaDB [uassbd]> 
